@@ -1,0 +1,77 @@
+// This function will take a postive number as input and  return the value of input by Multiply the number by 3, then adding 10, then dividing by 2, then subtract 5.
+
+function mindGame(number) {
+  if (typeof number !== "number" || number < 0) {
+    return "Your Input Should be Positive Number";
+  }
+  return (number * 3 + 10) / 2 - 5;
+}
+
+//this function will take string input then it will check for every index of the string.
+// then it will return even/odd depending on the lenth of the string is divisible by 2 or not.
+
+function evenOdd(str) {
+  if (typeof str !== "string") {
+    return "Your Input Should be a String";
+  }
+  let arrayLenth = str.length;
+  if (arrayLenth % 2 == 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
+}
+
+//this function will take a number input and it will check if the difference bettween the input and 7 is lesser or grater than 7 ,
+// if the number is less than 7, it will return the difference and if the number is greater it will return the input multiplied  to 2.
+
+function isLGSeven(number) {
+  if (typeof number !== "number") {
+    return "Your Input Should be a Number.";
+  }
+
+  let difference = number - 7;
+  if (difference < 7) {
+    return difference;
+  } else {
+    return number * 2;
+  }
+}
+
+// This function will take an array as an input then it will check if any element of the array is negetive.
+// the the function will return the total negetive number on that array
+
+function findingBadData(arr) {
+  if (!Array.isArray(arr)) {
+    return "Your input should be a array";
+  }
+  let badDataCount = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] !== "number") {
+      return "Array Elements Should be Numbers";
+    }
+    if (arr[i] < 0) {
+      badDataCount++;
+    }
+  }
+  return badDataCount;
+}
+
+//this function will take 3 numbers as parameters and multiply the 1st one with 21, nd one with 32 and 3rd one with 43
+//then it will check if the total is greater than 2000 if true than it will return total number by  doing a subtract with 2000 and if the total value is less than 2000 than it will return the total.
+
+function gemsToDiamond(firstFriend, secondFriend, thirdFriend) {
+  if (
+    typeof firstFriend !== "number" ||
+    typeof secondFriend !== "number" ||
+    typeof thirdFriend !== "number"
+  ) {
+    return "You Should Input All Three Valid Numbers.";
+  }
+  let totalDiamond = firstFriend * 21 + secondFriend * 32 + thirdFriend * 43;
+  if (totalDiamond >= 2000) {
+    return totalDiamond - 2000;
+  } else {
+    return totalDiamond;
+  }
+}
